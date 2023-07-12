@@ -1,0 +1,5 @@
+#!name= Sync.me
+#!desc= unlock
+
+hostname = api.sync.me
+^https?:\/\/api\.sync\.me\/.+get_purchases$ url script-response-body syncme.js

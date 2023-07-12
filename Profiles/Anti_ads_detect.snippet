@@ -1,0 +1,9 @@
+#!name=Anti Adblock Detect
+#!desc=Gift for Hacker LT, ipacrack.com, ios.codevn.net
+
+
+(^https?:\/\/(ipacrack\.com|ios\.codevn\.net))|(^https?:\/\/(phimmoi)+(\w+)\.(net|com|org)) url script-response-body AntiAdbDetect.js
+^https?:\/\/howdy\.id\/dist\/js\/fallback url reject-200
+^https?:\/\/howdy\.id\/dist\/js\/vpn url reject-200
+^https?:\/\/howdy\.id\/dist\/js\/api url reject-200
+hostname = ipacrack.com, ios.codevn.net ,howdy.id, *phimmoi*.*

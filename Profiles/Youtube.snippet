@@ -1,0 +1,16 @@
+#!name= Youtube 
+#!desc= Delete Youtube ads
+# IOS >= 15
+# Delete advertisements in waterfall streams, videos, searches andShorts，
+# Delete video ads in Shorts
+# Delete the bottom upload button
+# There will be omissions in advertising information, and advertisements may appear occasionally.
+# inspired by @Choler & @DivineEngine & @app2smile
+
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide) url script-response-body youtube.js
+//https://raw.fastgit.org/Maasea/sgmodule/master/Script/Youtube/youtube.js
+
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-200
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com

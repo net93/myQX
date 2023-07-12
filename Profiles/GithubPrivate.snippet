@@ -1,0 +1,15 @@
+# Github Private (QX version)
+ # Allow references to configuration files such as subscription distribution, rewriting, and scripts in Github's private warehouse/gist.
+ # Original author: @Peng-YM (the original version supports surge and loon, address: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js)
+ # Produced by: @dcpeng
+ # Instructions for use: (see the comments in the script or the following content)
+ # 1. Add this rewrite rule
+ # 2. Log in to Github > click on the avatar drop-down menu > select Settings > select the last Developer settings on the left menu bar > select Personal access tokens > Generate new token > fill in the token name in Note > ☑️ Select the first item repo in the check box below  (All sub-items are automatically checked) > Click the Generate token button to save and return.
+ #(If you already have a token with repo permission, you can use the existing token directly)
+ # 3. Fill in the username in BoxJS (open Github, the browser address bar should display https://github.com/here is your username/) and the above token.
+ # You can directly use Peng-YM's boxjs subscription: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json)
+ # Or use my boxjs subscription: https://github.com/dcpengx/QuantumultX/blob/main/dcpeng_boxjs.json
+
+^https?:\/\/(raw|gist)\.githubusercontent.com url script-request-header https://raw.githubusercontent.com/dcpengx/QuantumultX/main/JavaScript/github-private-repo.js
+
+hostname= raw.githubusercontent.com, gist.githubusercontent.com

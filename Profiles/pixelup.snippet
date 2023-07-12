@@ -1,0 +1,7 @@
+#!name=Unlock Pixelup
+#!desc=Pixelup
+;^https:\/\/gateway\.cerebroapi\.com\/log\/ios$ url reject
+^https:\/\/receipt-verifier\.cdwapi\.com\/receipt$ url script-response-body Pixelup.js
+
+hostname = *.cdwapi.com
+;*.cerebroapi.com

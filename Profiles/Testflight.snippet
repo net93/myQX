@@ -1,0 +1,10 @@
+#!name= Auto Testflight
+#!desc= Auto join beta app on testflight
+
+
+hostname = testflight.apple.com
+
+;^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ url script-request-header TestflightKey.js
+
+
+^https://testflight.apple.com/join/(.*) url script-request-header TestflightKey.js

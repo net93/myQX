@@ -1,0 +1,12 @@
+#!name=Shopee++
+#!desc=Shopee Coin
+
+
+^https?:\/\/(\w+\.)?shopee\.vn\/api\/.*\/platform\/get_ft_v2\?userid url script-request-header shopee/headers.js
+
+;^https?:\/\/mall\.shopee\.vn\/api\/v4\/checkout/ url script-response-body shopee/checkoutInfo.js
+^https:\/\/games\.shopee\.vn\/gameplatform\/.*\/activity\/.*\/settings\?appid= url script-response-body shopee/listgames.js
+
+^https?:\/\/shopee\.vn\/mkt\/coins\/api\/v2\/checkin_new url script-response-body Test.js
+
+hostname = shopee.vn, mall.shopee.vn, games.shopee.vn

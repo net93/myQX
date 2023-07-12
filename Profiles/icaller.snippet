@@ -1,0 +1,4 @@
+#!name = icaller
+#desc = unlock premium
+hostname = api.icaller.info
+^https:\/\/api\.icaller\.info\/v1\/package\/check-verify$ url response-body "subscription_status":0 response-body "subscription_status":1
