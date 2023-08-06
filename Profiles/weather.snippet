@@ -1,7 +1,9 @@
 #!name = weather
 
-hostname = api.windyapp.co, app-subscription-proxy.accuweather.com
+hostname = api.windyapp.co, app-subscription-proxy.accuweather.com, api.windfinder.com
 #windyapp
 ^https:\/\/api\.windyapp\.co\/apiV9\.php\?method=syncUserData&userID url script-response-body windyapp.js
 #AccuWeather
 ^https?:\/\/app-subscription-proxy\.accuweather\.com\/subscriptions\/v1\/apple\/validate url script-response-body accu.js
+#Windfinder
+^https?:\/\/api.windfinder.com\/v2\/validate\/ios\/iap url script-response-body Test.js

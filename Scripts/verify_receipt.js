@@ -1,4 +1,4 @@
-
+console.log($response.body)
 re('("expires_date"):"\\w{4}@("expires_date_pst"):"\\w{4}@("expires_date_ms"):"\\w+"@("is_trial_period"):"\\w+"','$1:"2099@$1:"2099@$1:"4096019658000"@$1:"false"','"cancellation_date":"\\S+\\s\\S+\\s\\w+\\W\\w+",@"cancellation_date_pst":"\\S+\\s\\S+\\s\\w+\\W\\w+",@"cancellation_date_ms":"\\d+",@"cancellation_reason":"\\d",')
 
 function re(){
