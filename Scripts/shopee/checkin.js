@@ -38,24 +38,7 @@ const myRequest = {
 };
 
 $task.fetch(myRequest).then(response => {
-	let obj = JSON.parse(response.body);
-	if(response.statusCode == 200) {
-		if(obj.data.success) {
-			$notify('🟢 Done ' + obj.data.check_in_day + 'day', obj.data.username, 'Increase_coins: '+ obj.data.increase_coins + ' coins');
-			console.log(obj.data.username+ ' increase coins: '+ obj.data.increase_coins);
-			$done();
-		}else{
-			$notify('🔴 Failed', obj.data.username, 'Try again tomorrow');
-			console.log(response.body);
-			$done();
-		};
-	}else{
-          $notify('🔴 Failed', 'StatusCode: ' + response.statusCode);
-		console.log(response.statusCode+'\n\n'+ response.body);
-		$done();
-	};
-}, 
-reason => {
-	$notify(reason.error,'aite error');
-	$done();
-});
+	let o = response.body
+console.log(o)
+})
+$done()

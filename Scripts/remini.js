@@ -33,6 +33,6 @@ let obj = {
 */
 let obj = JSON.parse($response.body)
 obj.me.active_subscriptions_ids = ["com.bigwinepot.nwdn.international.1y_p99_99_ft_pro"]
-console.log(JSON.stringify(obj))
+//console.log(JSON.stringify(obj))
 
 $done(JSON.stringify(obj))

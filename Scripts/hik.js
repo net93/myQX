@@ -1,4 +1,3 @@
-
 /**
  * @hik partner checkin
  * 
@@ -30,8 +29,12 @@ const myRequest = {
 };
 
 $task.fetch(myRequest).then(response => {
+  let res = JSON.parse(response.body)
+  if(res.data){
     console.log(response.statusCode + "\n\n" + response.body);
-    $done();
+    $notify(`HIK checkin ${res.data.continuousDays} days`, `PointObtain: ${res.data.pointObtain}`)
+    $done()
+  }else{$notify(`HIK can't checkin`, res.message); $done()}
 }, reason => {
     console.log(reason.error);
     $done();
