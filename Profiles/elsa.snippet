@@ -1,0 +1,7 @@
+#!name=Unlock ElsaSpeak
+#!desc=ElsaSpeak
+
+hostname = pool.elsanow.io
+
+^https:\/\/pool\.elsanow\.io\/entitlement\/api\/v1\/user\/entitlements url script-response-body elsa.js
+^https:\/\/pool\.elsanow\.io\/user\/api\/v2\/purchase url script-response-body elsa.js

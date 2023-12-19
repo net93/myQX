@@ -2,9 +2,10 @@
 #!desc=Shopee
 
 
-^https?:\/\/(\w+\.)?shopee\.vn\/api\/.*\/platform\/get_ft_v2\?userid url script-request-header shopee/headers.js
+https://games-dailycheckin.shopee.vn/mkt/coins/api/v2/settings url script-request-header shopee/headers.js
+;^https:\/\/mall.shopee.vn\/api\/v4\/platform\/get_ft_v2\?userid url script-request-header shopee/headers.js
 
 ^https:\/\/games\.shopee\.vn\/gameplatform\/.*\/activity\/.*\/settings\?appid= url script-response-body shopee/listgames.js
 
-^https?:\/\/mall\.shopee\.vn\/api\/v4\/checkout url script-response-body shopee/checkoutInfo.js
-hostname = mall.shopee.vn, games.shopee.vn
+;^https?:\/\/mall\.shopee\.vn\/api\/v4\/checkout url script-response-body shopee/checkoutInfo.js
+hostname = mall.shopee.vn, games.shopee.vn, games-dailycheckin.shopee.vn
