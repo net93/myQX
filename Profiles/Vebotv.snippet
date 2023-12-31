@@ -1,6 +1,6 @@
 #!name=VeboTV
 #!desc=VeboTV remove Ads, Bet
-hostname = *.fbdata.xyz, *.fbhub.xyz, api.vebo.*, *.imgur.com, watch.4shares.live, entitlements.jwplayer.com
+hostname = *.fbdata.xyz, *.fbhub.xyz, api.vebo.*, *.imgur.com, watch.4shares.live, entitlements.jwplayer.com, watch.ezyproxy.com
 
 ^https:\/\/api\.vebo\.xyz\/api\/a\/vebotv\/(home|live|bh) url reject
 
@@ -10,3 +10,4 @@ https://i.imgur.com/.+.gif url reject-200
 https://watch.4shares.live/img/.+.gif url reject-200
 https://watch.4shares.live/avast.+.xml url reject-200
 https://entitlements.jwplayer.com/.+.json url reject-200
+https://watch.ezyproxy.com/img/.*.gif url reject

@@ -1,9 +1,11 @@
 #!name= Picsart
 #!desc=Unlock Picsart Gold
-;^https:\/\/api\.(picsart|meiease)\.(cn|com)\/users\/show\/me\.json url script-request-header delheader.js
+^https:\/\/api\.(picsart|meiease)\.(cn|com)\/gw-v2\/users\/show\/me\.json url script-request-header delheader.js
 
-;^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/scripts/langkhach/picsart.js
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/gw-v2\/users\/show\/me\.json url script-response-body Picsart.js
+;https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/scripts/langkhach/picsart.js
 
 ^https?:\/\/api\.picsart\.com\/shop\/subscription\/apple\/purchases url script-response-body Picsart.js
 
 hostname = api.picsart.*, api.meiease.*
+;https://api.picsart.com/gw-v2/users/show/me.json

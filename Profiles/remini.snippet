@@ -1,7 +1,8 @@
 #!name = Remini
 #!desc = unlock pro
 
-hostname = remini.oracle.bendingspoonsapps.com
+hostname = remini.oracle.bendingspoonsapps.com, 
+//*.api.remini.ai
 
 ^https:\/\/remini\.oracle\.bendingspoonsapps\.com\/v2\/users\/setup$ url script-response-body remini.js
 ^https:\/\/remini\.oracle\.bendingspoonsapps\.com\\/v2\/purchases\/verify\/apple$ url script-response-body remini.js

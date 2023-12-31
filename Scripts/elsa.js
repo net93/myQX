@@ -3,17 +3,18 @@ let url = $request.url
 if(url.includes('entitlements?encrypt=0')){
   body = JSON.parse(body)
   body.tier.code = 'premium'
+  body.tier.expire_at = 4101595296
   body.transactions[0].catalog = 'premium'
   body.transactions[0].interval = 'subscription'
+  body.transactions[0].status = 'granted'
   body = JSON.stringify(body)
-  body = body.replace(/("expire_at"):\d+/g, '$1:4093289599')
 }
 
 
 if(url.includes('purchase')){
   body = JSON.parse(body)
   body.subscriptions = {
-      "expire_at" : "20990917",
+      "expire_at" : "20991222",
       "store" : "ios",
       "subscription" : "one_year.paid.trial.week.ios.v4.elsa.premium_membership",
       "days_to_end" : 8,
@@ -88,7 +89,7 @@ https://pool.elsanow.io/user/api/v2/purchase
   ]
 }
 
-
+########################################
 {
   "subscriptions" : [
     {

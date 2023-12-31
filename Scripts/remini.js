@@ -32,7 +32,10 @@ let obj = {
 }
 */
 let obj = JSON.parse($response.body)
-obj.me.active_subscriptions_ids = ["com.bigwinepot.nwdn.international.1y_p99_99_ft_pro"]
-//console.log(JSON.stringify(obj))
+obj.me.active_subscriptions_ids = ["com.bigwinepot.nwdn.international.1w_p9_99_paygo_6w_0_99"]
+
+//["com.bigwinepot.nwdn.international.1y_p99_99_ft_pro"]
+obj.settings['__identity__'].expiration = "2099-12-25T05:46:55.450973+00:00"
+console.log(JSON.stringify(obj))
 
 $done(JSON.stringify(obj))
