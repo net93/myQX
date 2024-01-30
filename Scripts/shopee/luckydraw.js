@@ -54,9 +54,22 @@ hShopee = JSON.parse(hShopee)
 const cookie = hShopee['Cookie']
 const url = `https://games.shopee.vn/api-gateway/luckydraw/api/v1/lucky/event/${x.event}`;
 const headers = {
-'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 15_7_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148`,
+'fruit-version-type' : `h5`,
+'Connection' : `keep-alive`,
+'Accept-Encoding' : `gzip, deflate, br`,
+'fruit-app-version' : `31715`,
 'Content-Type' : `application/json`,
-'Cookie' : cookie
+'games-biz-version' : `6.3.1`,
+'Origin' : `https://games.shopee.vn`,
+'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Beeshop locale=vi version=31715 appver=31715 rnver=1704438358 shopee_rn_bundle_version=6002001 Shopee language=vi app_type=1`,
+'afinfo' : `{"nf":1}`,
+'Cookie' : cookie,
+'Host' : `games.shopee.vn`,
+'Referer' : `https://games.shopee.vn/luckydraw-v2/?game=wheel&activity=3e2090e8fc0e72e6&source=1&component_name=STW%20VC&md_component_id=1670395016320&microsite_pageid=12831&section_location=9`,
+'games-app-version' : `31715`,
+'games-runtime' : `EgretH5`,
+'Accept-Language' : `vi-VN,vi;q=0.9`,
+'Accept' : `*/*`,
 };
 const body = JSON.stringify({request_id: randomString(16,0),
 app_id: x.appid,

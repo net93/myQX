@@ -54,11 +54,15 @@ const myRequest = {
 
 $task.fetch(myRequest).then(response => {
     // response.statusCode, response.headers, response.body
+    let obj = JSON.parse(response.body)
+    let msg = obj.msg
     console.log(response.body);
+    $notify('SP Checkin', msg)
     $done();
 }, reason => {
     // reason.error
     console.log(reason.error); // Error!
+    $notyfi('Error')
     $done();
 });
 

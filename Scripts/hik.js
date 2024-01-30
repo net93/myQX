@@ -37,5 +37,6 @@ $task.fetch(myRequest).then(response => {
   }else{$notify(`HIK can't checkin`, res.message); $done()}
 }, reason => {
     console.log(reason.error);
+    $notify('hik Error')
     $done();
 });

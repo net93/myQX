@@ -32,7 +32,7 @@ if (hShopee === undefined) {
 hShopee = JSON.parse(hShopee)
 const cookie = hShopee['Cookie']
 let has = false;
-	const myRequest = {
+const myRequest = {
 		url: url,
 		method: 'GET',
 		headers: {
