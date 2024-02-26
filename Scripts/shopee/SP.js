@@ -57,9 +57,11 @@ $.post(myRequest, (err, res, data)=>{
 		let r = obj.data.success?`Increase coins: ${obj.data.increase_coins}`:obj.data.success
 		$.log(data)
 		$.msg('SP Checkin', obj.msg, `${r}`)
+		$done()
 	}else{
 		$.log(`SP checkin ${err}`)
 		$.msg('Shopee error','', err)
+		$done()
 	}
 	$done()
 });

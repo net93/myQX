@@ -32,10 +32,21 @@ const myRequest = {
 $.post(myRequest, (err, res, data)=>{
 	if(!err){
 		let obj = JSON.parse(data)
-		//$.log(data)
-		$.msg(`HIK checkin ${JSON.stringify(obj.data.continuousDays)} days`, obj.message, `${obj.data.pointObtain} points`)
+		switch(obj.errorCode){
+			case "0":
+			$.msg(`HIK checkin ${JSON.stringify(obj.data.continuousDays)} days`,`${obj.data.pointObtain} points`)
+			break
+			case "LAP019010":
+			$.log(data)
+			break
+			case "LAP001004":
+			$.msg('HIK checkin', obj.message)
+			break
+		}
+		$done()
 	}else{
 		$.msg(`Hik ${err}`)
+		$done()
 	}
 	$done()
 })

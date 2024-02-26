@@ -30,10 +30,15 @@ $.post(requestSS, async function(err, res, data){
 		if(res.statusCode==200){
 			$.setdata(obj.data.session.session_id, 'sessionId')
 			$.log(obj.data.session.session_id)
-		}else{$.log('Shopee error')}
+			$done()
+		}else{
+			$.log('Shopee session error')
+			$done()
+		}
 		
 	}else{
 		$.msg(`SP session ${err}`)
+		$done()
 	}
 	$done()
 })
