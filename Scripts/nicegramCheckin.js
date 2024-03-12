@@ -18,7 +18,7 @@ const headers = {
 'Host' : `nicegram.cloud`,
 'X-iOS-build' : `224`,
 'Accept' : `application/json`,
-'X-timestamp' : `1708998485154`
+'X-timestamp' : `${new Date().getTime()}`
 }
 
 const myRequest = {
